@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Tahoma, sans-serif;
+        }
+
+        body {
+            background: #000;
+            color: #eaeaea;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            background: url(portfolioimg.jpg)center/cover
+         
+                 no-repeat;
+            text-align: center;
+            padding: 3rem 1rem;
+            border-bottom: 1px solid #222;
+        }
+
+        .header h1 {
+            font-size: 2.8rem;
+            color: #00e5ff;
+        }
+
+        .header p {
+            color: #aaa;
+            margin-top: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            background: #0d0d0d;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #222;
+        }
+
+        .navbar a {
+            color: #ddd;
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .navbar a::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #00e5ff;
+            left: 0;
+            bottom: -5px;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover::after {
+            width: 100%;
+        }
+
+        /* Sections */
+        .section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 3rem 1.5rem;
+        }
+
+        .section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: #00e5ff;
+        }
+
+        /* About */
+        #about p {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            color: #bbb;
+            font-size: 1.05rem;
+        }
+
+        /* Skills */
+        .skills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .skills span {
+            background: #111;
+            border: 1px solid #222;
+            padding: 0.6rem 1.3rem;
+            border-radius: 30px;
+            color: #00e5ff;
+            transition: 0.3s;
+        }
+
+        .skills span:hover {
+            background: #00e5ff;
+            color: #000;
+            transform: translateY(-4px);
+        }
+
+        /* Projects */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: #0f0f0f;
+            border: 1px solid #222;
+            padding: 2rem;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #00e5ff;
+            box-shadow: 0 0 20px rgba(0, 229, 255, 0.15);
+        }
+
+        .card h3 {
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            color: #aaa;
+            font-size: 0.95rem;
+        }
+
+        /* Contact */
+        #contact p {
+            text-align: center;
+            color: #bbb;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: #0d0d0d;
+            text-align: center;
+            padding: 1.2rem;
+            color: #777;
+            border-top: 1px solid #222;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .navbar {
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>SIDDHI YEWLE</H1>
+        <p>Web Developer • UI Designer</p>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- About -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>
+            I build modern, responsive, and visually appealing web interfaces
+            focused on performance, accessibility, and clean design.
+        </p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <div class="skills">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Python</span>
+            <span>Responsive Design</span>
+            <span>UI/UX</span>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="card">
+                <h3>Portfolio Website</h3>
+                <p>Dark-themed responsive portfolio with modern UI.</p>
+            </div>
+            <div class="card">
+                <h3>Landing Page</h3>
+                <p>High-conversion landing page optimized for mobile.</p>
+            </div>
+            <div class="card">
+                <h3>Business Website</h3>
+                <p>Professional website with clean layout and animations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>Email: siddhiyewle@gmail.com</p>
+        <p>Phone: +123 456 7890</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 Siddhi Yewle All rights reserved.</p>
+    </footer>
+
+</body>
+</html
